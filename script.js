@@ -17,6 +17,8 @@ function addExpense() {
     const expensesDiv = document.getElementById("expenses");
     const container = document.createElement("div");
     const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.placeholder = "Expense name:";
     const amountInput = document.createElement("input");
     amountInput.type = "number";
     amountInput.placeholder = "Amount";
@@ -30,7 +32,7 @@ function calculation() {
   let totalCost = 0;
 
   for (let i = 1; i < inputs.length; i += 2) {
-    const amount = parseFloat(inputs[i].value) || 0;
+    const amount = parseFloat(inputs[i].value);
     totalCost += amount;
   }
 
