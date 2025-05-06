@@ -26,16 +26,42 @@ function addExpense() {
     container.appendChild(amountInput);
     expensesDiv.appendChild(container);
 }
-function calculation() {
-  const expensesDiv = document.getElementById("expenses");
-  const inputs = expensesDiv.querySelectorAll("input");
-  let totalCost = 0;
 
-  for (let i = 1; i < inputs.length; i += 2) {
+function addBonus() {
+    const bonusesDiv = document.getElementById("bonuses");
+    const container = document.createElement("div");
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.placeholder = "Expense name:";
+    const amountInput = document.createElement("input");
+    amountInput.type = "number";
+    amountInput.placeholder = "Amount";
+    container.appendChild(nameInput);
+    container.appendChild(amountInput);
+    bonusesDiv.appendChild(container);
+}
+
+function calculation() {
+    const expensesDiv = document.getElementById("expenses");
+    const inputs = expensesDiv.querySelectorAll("input");
+    let totalCost = 0;
+
+    for (let i = 1; i < inputs.length; i += 2) {
     const amount = parseFloat(inputs[i].value);
     totalCost += amount;
   }
+// get bonuses
+    const bonusesDiv = document.getElementById("bonuses");
+    const bonusInputs = bonusesDiv.querySelectorAll("input");
+    let totalBonus = 0;
 
-  const remainder = income - totalCost;
-  document.getElementById("result").textContent = "Remainder: " + remainder.toFixed(2);
+    for (let i = 1; i < bonusInputs.length; i += 2) {
+        const amount = parseFloat(bonusInputs[i].value) || 0;
+        totalBonus += amount;
+    }
+
+
+    const totalIncome = income + totalBonus;
+    const remainder = totalIncome - totalCost;
+    document.getElementById("result").textContent = "Remainder: " + remainder.toFixed(2);
 }
