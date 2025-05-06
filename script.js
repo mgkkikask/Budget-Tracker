@@ -25,7 +25,6 @@ function addExpense() {
     expensesDiv.appendChild(container);
 }
 function calculation() {
-  const income = parseFloat(document.getElementById("income").value || 0;
   const expensesDiv = document.getElementById("expenses");
   const inputs = expensesDiv.querySelectorAll("input");
   let totalCost = 0;
