@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
-    <link rel="stylesheet" href="results.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results</title>
+  
+  <!-- CSS for the results html link -->
+  <link rel="stylesheet" href="results.css" />
 </head>
-<body>
-    <div class="container">
-        <h2>Results</h2>
-        
-        <p id="result" class="result-text">Remainder: $4,000.00</p>
-        <p class="result-text">Bills total amount: $6,000.00</p>
-        
-        <a href="input.html" class="back-button">Back to Input</a>
-    </div>
 
+<!-- Uses function when you enter the page-->
+<body onload="calculation()">
+  <div class="container">
+    <h2>Results</h2>
+
+    <!-- Remainder output -->
+    <p id="result" class="result-text">Remainder: $0.00</p>
+
+    <!--  Bills total output -->
+    <p id="bills" class="result-text">Bills total amount: $0.00</p>
+
+    <!--  takes you back to input page -->
+    <a href="input.html" class="back-button">Back to Input</a>
+  </div>
+
+  <!--  Added script link for JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
