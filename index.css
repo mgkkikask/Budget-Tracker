@@ -1,3 +1,7 @@
+/*
+    Applying body to the whole page
+    using text, background, and spacing
+*/
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(140, 198, 140);
@@ -7,19 +11,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
+/*
+    centers the content
+    adds spacing from top
+*/
 .container {
     text-align: center;
     margin-top: 150px;
 }
 
+/*
+    sets the font size and weight of the title
+    adds spacing from the bottom
+*/
 h1 {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 40px;
 }
 
+/*
+    styles the click here button
+    adds background color, text color, border, padding, 
+    font size, and cursor
+*/
 .start-button {
     background-color: rgb(0, 133, 200);
     color: white;
@@ -32,6 +50,9 @@ h1 {
     transition: opacity 0.15s;
 }
 
+/*
+    makes the button transparent on hover and active
+*/
 .start-button:hover {
     opacity: 0.8;
 }
@@ -39,3 +60,4 @@ h1 {
 .start-button:active {
     opacity: 0.5;
 }
+
