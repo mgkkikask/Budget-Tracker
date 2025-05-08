@@ -10,7 +10,7 @@ function goToResultsPage() {
 
 function storeIncome() {
     income = parseFloat(document.getElementById("income").value);
-    console.log("Stored income: ", income);
+    localStorage.setItem("income", income);
 }
 
 function addExpense() {
