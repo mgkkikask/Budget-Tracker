@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Input Budget</title>
-  <link rel="stylesheet" href="input.css">
+  <link rel="stylesheet" href="input.css" />
 </head>
 <body>
   <div class="container">
+    <!--Container for all input content -->
+
     <h2 class="page-title">Enter Your Budget Details</h2>
-
+    <!--page heading -->
+    
+    <!--Income Input -->
     <label for="income" class="input-label">Monthly Income:</label>
-    <input type="number" id="income" class="input-box" placeholder="e.g., 5000">
+    <input type="number" id="income" class="input-box" placeholder="e.g., 5000" 
+    onchange="storeIncome()" />
 
+
+    <!--Expenses section -->
     <div class="expenses-section">
       <label class="input-label">Expenses:</label>
-      <input type="text" placeholder="Expense name" class="input-box">
-      <input type="number" placeholder="Amount" class="input-box">
+
+      <!--Container for added expense inputs -->
+      <div id="expenses">
+        <input type="text" placeholder="Expense name" class="input-box" />
+        <input type="number" placeholder="Amount" class="input-box" />
+      </div>
+
+      <!--  Added button to trigger addExpense() -->
+      <button class="view-results-button" onclick="addExpense()">+ Add Expense</button>
     </div>
 
+    <div class="expenses-section">
+      <label class="input-label">Bonuses:</label>
 
-    <a href="results.html" class="view-results-button">View Results</a>
+      <!-- Bonus Section -->
+      <div id="bonuses">
+        <input type="text" placeholder="Bonus name" class="input-box" />
+        <input type="number" placeholder="Amount" class="input-box" />
+      </div>
 
+      <!-- container for added bonus() -->
+      <button class="view-results-button" onclick="addBonus()">+ Add Bonus</button>
+    </div>
+
+    <!-- To Results page -->
+    <a href="#" class="view-results-button" onclick="goToResultsPage()">View Results</a>
+
+    <!-- To homepage -->
     <a href="index.html" class="back-button">Go Back</a>
   </div>
+
+  <!-- Added script link for JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
