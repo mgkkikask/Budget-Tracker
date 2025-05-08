@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Input</title>
+    <link rel="stylesheet" href="style/input.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Budget</h1>
+        
+        <label for="income">Type in monthly income:</label>
+        <input type="number" id="income" placeholder="Income" oninput="storeIncome()">
+
+        <div id="expenses">
+            <h3>Enter your expenses:</h3>
+            <!-- Expense inputs will be added here dynamically -->
+        </div>
+
+        <button class="add-bill-button" onclick="addExpense()">+ Add Expense</button>
+        
+        <div id="bonuses">
+            <h3>Enter any bonuses:</h3>
+            <!-- Bonus inputs will be added here dynamically -->
+        </div>
+
+        <button class="add-bill-button" onclick="addBonus()">+ Add Bonus</button>
+        
+        <a href="#" class="next-button" onclick="goToResultsPage()">View Results</a>
+    </div>
+
+</body>
+</html>
