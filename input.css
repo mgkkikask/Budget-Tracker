@@ -1,3 +1,7 @@
+/*
+    Styling for the input page
+    use text, background, and spacing
+*/
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(122, 219, 198); /* Light green background */
@@ -9,6 +13,12 @@ body {
     align-items: center;
 }
 
+/* 
+    Container for the input form
+    Centered with a white background and shadow
+    Rounded corners for a modern look
+    Padding for spacing inside the container
+*/
 .container {
     background-color: white;
     padding: 40px;
@@ -18,12 +28,25 @@ body {
     text-align: center;
 }
 
+/*
+    Title of the page
+    Bold and larger font size for emphasis
+    Margin at the bottom for spacing from the input fields
+*/
 .page-title {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+/* 
+    Input label styling
+    Block display for each label
+    Left-aligned text for clarity
+    Margin at the top for spacing from the previous element
+    Bold font weight for emphasis
+    Color for better visibility against the background
+*/
 .input-label {
     display: block;
     text-align: left;
@@ -33,6 +56,14 @@ body {
     color: rgb(60, 60, 60);
 }
 
+/* 
+    Input box styling
+    Full width for better usability
+    Padding for comfort when typing
+    Margin at the top for spacing from the label
+    Border and border-radius for a modern look
+    Font size for readability
+*/
 .input-box {
     width: 100%;
     padding: 10px;
@@ -42,6 +73,15 @@ body {
     font-size: 14px;
 }
 
+/* 
+    Submit button styling
+    Background color for visibility
+    White text for contrast
+    Padding for comfort when clicking
+    Border-radius for a modern look
+    Font size for readability
+    Margin at the top for spacing from the input fields
+*/
 .view-results-button,
 .back-button {
     background-color: rgb(0, 133, 200);
@@ -56,11 +96,19 @@ body {
     transition: opacity 0.15s;
 }
 
+/* 
+    Submit button hover effect
+    Slightly reduce opacity for a visual cue
+*/
 .view-results-button:hover,
 .back-button:hover {
     opacity: 0.8;
 }
 
+/* 
+    Submit button active effect
+    Further reduce opacity for a visual cue
+*/
 .view-results-button:active,
 .back-button:active {
     opacity: 0.5;
