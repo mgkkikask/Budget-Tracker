@@ -5,6 +5,26 @@ function goToInputPage() {
 }
 
 function goToResultsPage() {
+    const expenses = [];
+    const inputs = document.getElementById("expenses").querySelectorAll("input");
+    for (let i = 0; i < inputs.length; i += 2) {
+        expenses.push({
+            name: inputs[i].value,
+            amount: parseFloat(inputs[i + 1].value) || 0
+        });
+    }
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+
+    const bonuses = [];
+    const bonusInputs = document.getElementById("bonuses").querySelectorAll("input");
+    for (let i = 0; i < bonusInputs.length; i += 2) {
+        bonuses.push({
+            name: bonusInputs[i].value,
+            amount: parseFloat(bonusInputs[i + 1].value) || 0
+        });
+    }
+    localStorage.setItem("bonuses", JSON.stringify(bonuses));
+
     window.location.href = "results.html";
 }
 
