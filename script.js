@@ -1,11 +1,11 @@
 let income = 0;
 
 function goToInputPage() {
-    window.location.href = "input page here";
+    window.location.href = "input.html";
 }
 
 function goToResultsPage() {
-    window.location.href = "results page here";
+    window.location.href = "results.html";
 }
 
 function storeIncome() {
