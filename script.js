@@ -1,5 +1,3 @@
-let income = 0;
-
 function goToInputPage() {
     window.location.href = "input.html";
 }
@@ -29,7 +27,7 @@ function goToResultsPage() {
 }
 
 function storeIncome() {
-    income = parseFloat(document.getElementById("income").value);
+    const income = parseFloat(document.getElementById("income").value);
     localStorage.setItem("income", income);
 }
 
@@ -62,24 +60,16 @@ function addBonus() {
 }
 
 function calculation() {
-    const expensesDiv = document.getElementById("expenses");
-    const inputs = expensesDiv.querySelectorAll("input");
-    let totalCost = 0;
+    const income = parseFloat(localStorage.getItem("income"));
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    const bonuses = JSON.parse(localStorage.getItem("bonuses")) || [];
 
-    for (let i = 1; i < inputs.length; i += 2) {
-    const amount = parseFloat(inputs[i].value);
-    totalCost += amount;
-  }
-// get bonuses
-    const bonusesDiv = document.getElementById("bonuses");
-    const bonusInputs = bonusesDiv.querySelectorAll("input");
+    let totalCost = 0;
     let totalBonus = 0;
 
-    for (let i = 1; i < bonusInputs.length; i += 2) {
-        const amount = parseFloat(bonusInputs[i].value) || 0;
-        totalBonus += amount;
-    }
-
+    expenses.forEach(exp => totalCost += exp.amount);
+// get bonuses
+    bonuses.forEach(bonus => totalBonus += bonus.amount);
 
     const totalIncome = income + totalBonus;
     const remainder = totalIncome - totalCost;
