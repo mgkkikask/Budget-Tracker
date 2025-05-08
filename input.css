@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-bill-button {
+    background-color: rgb(41, 118, 211);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.add-bill-button:hover {
+    background-color: #2a75d6;
+}
+
+.add-bill-button:active {
+    opacity: 0.7;
+}
+
+.next-button {
+    display: inline-block;
+    background-color: rgb(66, 133, 215);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: box-shadow 0.15s;
+}
+
+.next-button:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
