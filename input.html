@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Input</title>
-    <link rel="stylesheet" href="input.css">
+  <meta charset="UTF-8">
+  <title>Input Budget</title>
+  <link rel="stylesheet" href="input.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Enter Your Budget</h1>
-        
-        <label for="income">Type in monthly income:</label>
-        <input type="number" id="income" placeholder="Income" oninput="storeIncome()">
+  <div class="container">
+    <h2 class="page-title">Enter Your Budget Details</h2>
 
-        <div id="expenses">
-            <h3>Enter your expenses:</h3>
-            <!-- Expense inputs will be added here dynamically -->
-        </div>
+    <label for="income" class="input-label">Monthly Income:</label>
+    <input type="number" id="income" class="input-box" placeholder="e.g., 5000">
 
-        <button class="add-bill-button" onclick="addExpense()">+ Add Expense</button>
-        
-        <div id="bonuses">
-            <h3>Enter any bonuses:</h3>
-            <!-- Bonus inputs will be added here dynamically -->
-        </div>
-
-        <button class="add-bill-button" onclick="addBonus()">+ Add Bonus</button>
-        
-        <a href="#" class="next-button" onclick="goToResultsPage()">View Results</a>
+    <div class="expenses-section">
+      <label class="input-label">Expenses:</label>
+      <input type="text" placeholder="Expense name" class="input-box">
+      <input type="number" placeholder="Amount" class="input-box">
     </div>
-    <script src="script.js"></script>
+
+
+    <a href="results.html" class="view-results-button">View Results</a>
+
+    <a href="index.html" class="back-button">Go Back</a>
+  </div>
 </body>
 </html>
