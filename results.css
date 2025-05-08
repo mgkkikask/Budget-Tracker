@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(97, 136, 192);
+    background-color: rgb(116, 170, 246);
     margin: 0;
     padding: 0;
 }
@@ -26,7 +26,7 @@ h2 {
 }
 
 .back-button {
-    background-color: rgb(200, 0, 0);
+    background-color: rgb(227, 62, 62);
     color: rgb(253, 253, 253);
     border: none;
     padding: 12px 24px;
